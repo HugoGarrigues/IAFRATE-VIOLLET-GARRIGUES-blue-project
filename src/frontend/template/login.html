@@ -17,11 +17,16 @@
             <h1 class="form-items-title">
                 Choisissez vos items :
             </h1>
-        <form action="/submit-items" method="post">
-            <label for="radio-item-1"><img src="../assets/img/Rogue_Sea_Dog_Compass.webp" alt="" /></label>
-            <label for="radio-item-2"><img src="../assets/img/Rogue_Sea_Dog_Spyglass.webp" alt="" /></label>
-            <label for="radio-item-3"><img src="../assets/img/Black_Dog_Cutlass.webp" alt="" /></label>
-        </form>
+<form action="/submit-items" method="post">
+        <label for="radio-item-1"><img src="../assets/img/Rogue_Sea_Dog_Compass.webp" alt="" /></label>
+        <input type="radio" name="radio-item" id="radio-item-1" value="Rogue_Sea_Dog_Compass">
+
+        <label for="radio-item-2"><img src="../assets/img/Rogue_Sea_Dog_Spyglass.webp" alt="" /></label>
+        <input type="radio" name="radio-item" id="radio-item-2" value="Rogue_Sea_Dog_Spyglass">
+
+        <label for="radio-item-3"><img src="../assets/img/Black_Dog_Cutlass.webp" alt="" /></label>
+        <input type="radio" name="radio-item" id="radio-item-3" value="Black_Dog_Cutlass">
+    </form>
         <div class="form-items-description">
             <!-- ajout texte a partir du js -->
         </div>
@@ -31,6 +36,9 @@
         <h1 class="form-questions-title">
             Questions :
         </h1>
+        <label for="question1">As-tu déjà navigué ?</label>
+        <label for="question2">As-tu peur de la mort ?</label>
+        <label for="question3">Aimes-tu l'alcool ?</label>
     </div>
     </div>
 </body>

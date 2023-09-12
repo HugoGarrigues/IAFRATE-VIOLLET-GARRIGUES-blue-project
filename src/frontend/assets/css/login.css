@@ -34,9 +34,16 @@ body{
     text-align: center;
 }
 
-
 .form-items img {
     width: 5vw;
     margin-left: 25px;
 }
 
+input:focus {
+    outline: none;
+}
+
+.form-questions{
+    display: flex;
+    flex-direction: column;
+}
