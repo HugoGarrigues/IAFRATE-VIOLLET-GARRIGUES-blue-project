@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ctn{
+    width: 38vw;
+    height: 7vh;
+    top: 0;
+    left: 30.7vw;
+    position: absolute;
+    clip-path: polygon(0% 0%, 10% 100%, 90% 100%, 100% 0%, 0% 0%);    
+    background-color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-style: solid;
+}
+
+.ctn-profil{
+    width: 10vw;
+    padding-left: 3vw;
+    display: flex;
+}
+
+.name{
+    color: whitesmoke;
+    align-items: center;
+    display: flex;
+    font-size: 1.5vw;
+}
+
+.picture img{
+    width: 5vw;
+}
+
+
+.ctn-bas{
+    width: 38vw;
+    height: 7vh;
+    position: absolute;
+    justify-content: space-between;
+    bottom: 0;
+    left: 30.7vw;
+    clip-path: polygon(0% 100%, 10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background-color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.gold{
+    color: gold;
+    align-items: center;
+    display: flex;
+    font-size: 1.5vw;
+    padding-right: 5vw;
+}
+
+.piece{
+    width: 2vw;
+    margin-top: 0.7vh;
+}
+
+
+.sac img{
+    padding-right: 5vw;
+    width: 3.2vw;
+}
+
