@@ -31,4 +31,8 @@ router.post('/submit-pseudo', (req, res) => {
     }
 });
 
+router.get('/game', (req, res) => {
+    res.sendFile(path.join(__dirname, '..','..', 'frontend','template','game.html'));
+});
+
 module.exports = router;
