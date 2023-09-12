@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=*, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
     <div class="ctn-form">
-        <img src="../assets/img/parchemin_vierge.png" alt="">
+
         <form action="/submit-pseudo" method="post">
             <input type="text" name="pseudo" placeholder="Entrez votre Pseudo">
-            <input type="submit" value="Soumettre">
         </form>
+
+        <div class="form-items">
+            <h1 class="form-items-title">
+                Choisissez vos items :
+            </h1>
+        <form action="/submit-items" method="post">
+            <label type="image" src="../assets/img/Sea_Dog_Shovel.webp" name="item" value="" >
+            <label type="image" src="../assets/img/Rogue_Sea_Dog_Compass.webp" name="item" value="" >
+            <label type="image" src="../assets/img/Black_Dog_Cutlass.webp" name="item" value="" >
+        </form>
+        <div class="form-items-description">
+            <!-- ajout texte a partir du js -->
+        </div>
     </div>
 
+    <div class="form-questions">
+        <h1 class="form-questions-title">
+            Questions :
+        </h1>
+    </div>
+    </div>
 </body>
 </html>

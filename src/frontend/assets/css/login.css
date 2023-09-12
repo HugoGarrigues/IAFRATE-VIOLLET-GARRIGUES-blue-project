@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(224, 205, 169);
+    background-image: url("../img/parchemin_vierge.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ctn-form {
+    width: 30vw;
+    height: 20vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ctn-form input {
+    border: none;
+    background-color: transparent;
+}
+
+.ctn-form input[type="text"] {
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.ctn-form input[type="image"] {
+    width: 5vw;
+    margin-left: 25px;
+}
+
