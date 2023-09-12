@@ -34,7 +34,8 @@ body{
     text-align: center;
 }
 
-.ctn-form input[type="image"] {
+
+.form-items img {
     width: 5vw;
     margin-left: 25px;
 }
