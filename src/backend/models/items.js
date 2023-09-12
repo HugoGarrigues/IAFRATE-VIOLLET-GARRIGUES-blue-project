@@ -1,10 +1,11 @@
 class Items {
-    constructor(name,description,price,effect){
+    constructor(name, description, price, effects = []) {
         this.name = name;
         this.description = description;
         this.price = price;
-        this.effect = effect;
+        this.effects = effects;
     }
 }
+
 
 module.exports = Items;

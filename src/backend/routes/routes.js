@@ -21,6 +21,8 @@ router.post('/submit-pseudo', (req, res) => {
 
     const joueur = new Joueur(pseudo, hp, gold, inventory);
 
+    joueur.formatePseudo();
+
     if (joueur.estPseudoValide()) {
         // Si le pseudo est valide, faites ce que vous voulez (l'enregistrer dans une DB, etc.)
         res.redirect('/game');
