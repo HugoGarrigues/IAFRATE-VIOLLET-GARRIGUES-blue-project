@@ -1,20 +1,76 @@
-*{
+* {
+
     margin: 0;
     padding: 0;
 }
 
-.ctn-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 10vh;
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
+
+.wrapper {
+    height: 100%;
+    background-color: #f5f6fa;
+  }
+    
+  .wave-btn {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 5px 30px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 52px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: all 1s;
+  }
+
+  .wave-btn span {
+    position: relative;
+    z-index: 2;
+  }
+    
+  .wave-btn:before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 130px;
+    background-color: #09557e;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: wave 5s infinite linear;
+    transition: all 1s;
+  }
+  
+    
+  .wave-btn:hover:before {
+    top: 15px;
+  }
+    
+  @keyframes wave {
+    0% {
+              transform: translate(-50%) rotate(-180deg);
+        
+    } 
+    100% {
+              transform: translate(-50%) rotate(360deg);
+    }
+  }
