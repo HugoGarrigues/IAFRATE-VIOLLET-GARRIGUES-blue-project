@@ -8,9 +8,15 @@ class Joueur {
     }
 
     estPseudoValide() {
-        const regex = /^[a-zA-Z0-9]{3,10}$/;
+        const regex = /^[a-zA-Z]{3,16}$/; 
         return regex.test(this.pseudo);
     }
+
+    formatePseudo() {
+        if(this.estPseudoValide()) {
+            this.pseudo = this.pseudo.charAt(0).toUpperCase() + this.pseudo.slice(1).toLowerCase();
+        }
+    }   
 }
 
 module.exports = Joueur;    
