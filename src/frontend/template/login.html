@@ -33,13 +33,31 @@
     </div>
 
     <div class="form-questions">
-        <h1 class="form-questions-title">
-            Questions :
-        </h1>
-        <label for="question1">As-tu déjà navigué ?</label>
-        <label for="question2">As-tu peur de la mort ?</label>
-        <label for="question3">Aimes-tu l'alcool ?</label>
+        <div class="question">As-tu déjà navigué?</div>
+        <div class="checkbox">
+            <input type="radio" name="navigation" value="Oui"> Oui
+            <input type="radio" name="navigation" value="Non"> Non
+        </div>
+        <br>
+    
+        <div class="question">As-tu peur de la mort?</div>
+        <div class="checkbox">
+            <input type="radio" name="mort" value="Oui"> Oui
+            <input type="radio" name="mort" value="Non"> Non
+        </div>
+        <br>
+    
+        <div class="question">Aimes-tu l'alcool?</div>
+        <div class="checkbox">
+            <input type="radio" name="alcool" value="Oui"> Oui
+            <input type="radio" name="alcool" value="Non"> Non
+        </div>
+        <br>
     </div>
+    </body>
+
+    <div class="form-submit">
+        <button type="submit">Valider</button>
     </div>
 </body>
 </html>

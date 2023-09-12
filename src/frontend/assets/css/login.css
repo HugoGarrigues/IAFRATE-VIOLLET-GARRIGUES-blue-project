@@ -17,8 +17,8 @@ body{
 
 .ctn-form {
     width: 30vw;
-    height: 20vh;
-    margin-top: 5vh;
+    height: 25vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +27,7 @@ body{
 .ctn-form input {
     border: none;
     background-color: transparent;
+    margin-bottom: 20px;
 }
 
 .ctn-form input[type="text"] {
@@ -34,9 +35,13 @@ body{
     text-align: center;
 }
 
+.ctn-form input[type="text"]::placeholder {
+    color: black
+}
+
 .form-items img {
     width: 5vw;
-    margin-left: 25px;
+    padding: 10px;
 }
 
 input:focus {
@@ -46,4 +51,49 @@ input:focus {
 .form-questions{
     display: flex;
     flex-direction: column;
+}
+
+label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ }
+  
+label:hover {
+ transform: scale(1.2);
+ transition: transform 0.2s ease;
+}
+
+.form-items input[type="radio"] {
+    display: none;
+  }
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+.form-questions input{
+    margin-top: 20px;
+}
+
+.form-questions {
+    font-size: 1.2em;
+}
+
+.form-submit button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit button:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
 }
