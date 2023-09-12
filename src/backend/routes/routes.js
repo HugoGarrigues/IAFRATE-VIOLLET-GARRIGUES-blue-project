@@ -4,11 +4,11 @@ const Joueur = require('../models/joueurs.js'); // Assurez-vous que le chemin es
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, '..','frontend', 'index.html'));
 });
 
 router.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'frontend','template','login.html'));
+    res.sendFile(path.join(__dirname, '..', '..','frontend','template','login.html'));
 });
 
 
