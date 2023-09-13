@@ -25,7 +25,7 @@
             <input type="radio" name="radio-item" id="radio-item-3" value="Black_Dog_Cutlass">
 
             <div class="form-items-description">
-                <!-- ajout texte à partir du js -->
+
             </div>
 
             <div class="form-questions">
@@ -66,5 +66,27 @@
     } else if (window.location.search.includes('error=missing-question-answer')) {
         alert("Veuillez répondre à toutes les questions.");
     }
+
+    let description1 = "Permet au joueur de gagner de l'alignement"
+    let description2 = "Permet au joueur de gagner de l'or"
+    let description3 = "Permet au joueur de gagner de l'alignement ainsi que de l'or"
+
+    let radioItem1 = document.getElementById('radio-item-1')
+    let radioItem2 = document.getElementById('radio-item-2')
+    let radioItem3 = document.getElementById('radio-item-3')
+
+    let formItemsDescription = document.querySelector('.form-items-description')
+
+    radioItem1.addEventListener('click', () => {
+        formItemsDescription.innerHTML = description1
+    })
+
+    radioItem2.addEventListener('click', () => {
+        formItemsDescription.innerHTML = description2
+    })
+
+    radioItem3.addEventListener('click', () => {
+        formItemsDescription.innerHTML = description3
+    })
 </script>
 </html>

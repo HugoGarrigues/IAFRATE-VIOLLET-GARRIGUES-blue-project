@@ -96,3 +96,10 @@ label img {
     width: 150px;
     height: 150px;
 }
+
+.form-items-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
