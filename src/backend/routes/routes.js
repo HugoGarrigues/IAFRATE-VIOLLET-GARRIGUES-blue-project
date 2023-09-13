@@ -54,7 +54,15 @@ router.post('/submit-pseudo', (req, res) => {
 
 
 router.get('/game', (req, res) => {
-    res.sendFile(path.join(__dirname, '..','..', 'frontend','template','game.html'));
+    if(req.session.joueur) {
+        res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'game.ejs'), {
+            joueur: req.session.joueur
+        });
+    } else {
+        // Si l'utilisateur n'a pas de session, redirigez-le vers la page de connexion
+        res.redirect('/login');
+    }
 });
+
 
 module.exports = router;
