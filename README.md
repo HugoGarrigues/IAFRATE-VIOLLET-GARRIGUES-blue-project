@@ -1,7 +1,5 @@
 # IAFRATE-VIOLLET-GARRIGUES-Projet-Blue
 
-# Projet Blue #
-
 ## Le Projet :
 
 Ce projet a été réalisé tout en suivant les consignes du projet blue mis a notre disposition. Nous avions pour le réaliser seulement 3 jours.
