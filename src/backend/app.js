@@ -15,6 +15,15 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 // Routes
 app.use('/', routes);
 
+const session = require('express-session');
+
+app.use(session({
+  secret: 'motdepasse',
+  resave: false,
+  saveUninitialized: true
+}));
+
+
 // Lancement du serveur
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);

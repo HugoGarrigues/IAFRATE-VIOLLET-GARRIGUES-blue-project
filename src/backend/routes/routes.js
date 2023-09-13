@@ -29,20 +29,28 @@ router.post('/submit-pseudo', (req, res) => {
         return res.redirect('/login?error=missing-question-answer');
     }
 
-    // Vous pouvez continuer avec le traitement des autres propriétés ici ...
     const hp = 100; // exemple
     const gold = 10; // exemple
     const inventory = []; // exemple
 
     const joueur = new Joueur(pseudo, hp, gold, inventory);
 
+    // Stockage des données du joueur dans la session
+    req.session.joueur = {
+        pseudo: joueur.pseudo,
+        hp: joueur.hp,
+        gold: joueur.gold,
+        inventory: joueur.inventory
+    };
+
     if (joueur.estPseudoValide()) {
-        // Si le pseudo est valide, faites ce que vous voulez (l'enregistrer dans une DB, etc.)
+        // Si le pseudo est valide, redirige vers la page du jeu
         res.redirect('/game');
     } else {
         res.redirect('/login?error=invalid-pseudo');
     }
 });
+
 
 
 router.get('/game', (req, res) => {
