@@ -73,7 +73,7 @@ body{
     width: 3.2vw;
 }
 
-/* waves */
+
 .ctn-tqt{
     width: 500px;
     height: 200px;
@@ -86,7 +86,7 @@ body{
 }
 
 .ocean {
-    height: 80px; /* change the height of the waves here */
+    height: 80px; 
     width: 460px;
     position: absolute;
     bottom: 0px;
@@ -152,8 +152,7 @@ body{
     left: 92%;
     top: 5px;
     position: absolute;
-     /* Ajustez cette valeur en fonction de l'endroit où vous souhaitez que le bas du bateau soit placé par rapport au bas de l'ocean */
-    width: 70px; /* Ajustez cette valeur selon la largeur que vous souhaitez pour le bateau */
+    width: 70px;
     z-index: 8;
   }
   

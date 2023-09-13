@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const Joueur = require('../models/joueurs.js'); // Assurez-vous que le chemin est correct
+const Joueur = require('../models/joueurs.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -19,23 +19,20 @@ router.post('/submit-pseudo', (req, res) => {
     const deathFearAnswer = req.body.mort;
     const alcoholPreference = req.body.alcool;
 
-    // Vérification si un objet est sélectionné
     if (!selectedItem) {
         return res.redirect('/login?error=missing-item');
     }
 
-    // Vérification des questions
     if (!navigationAnswer || !deathFearAnswer || !alcoholPreference) {
         return res.redirect('/login?error=missing-question-answer');
     }
 
-    const avancement = 12; // exemple
-    const gold = 10; // exemple
-    const inventory = []; // exemple
+    const avancement = 12; 
+    const gold = 10; 
+    const inventory = []; 
 
     const joueur = new Joueur(pseudo, avancement, gold, inventory);
 
-    // Stockage des données du joueur dans la session
     req.session.joueur = {
         pseudo: joueur.pseudo,
         avancement: joueur.avancement,
@@ -44,7 +41,6 @@ router.post('/submit-pseudo', (req, res) => {
     };
 
     if (joueur.estPseudoValide()) {
-        // Si le pseudo est valide, redirige vers la page du jeu
         res.redirect('/game');
     } else {
         res.redirect('/login?error=invalid-pseudo');
@@ -62,7 +58,6 @@ router.get('/game', (req, res) => {
             evenements: defaultEvenements
         });
     } else {
-        // Si l'utilisateur n'a pas de session, redirigez-le vers la page de connexion
         res.redirect('/login');
     }
 });
@@ -73,10 +68,18 @@ router.get('/profil', (req, res) => {
             joueur: req.session.joueur
         });
     } else {
-        // Si l'utilisateur n'a pas de session, redirigez-le vers la page de connexion
         res.redirect('/login');
     }
 });
 
+router.get('/fin', (req, res) => {
+    if(req.session.joueur) {
+        res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'fin.ejs'), {
+            joueur: req.session.joueur
+        });
+    } else {
+        res.redirect('/login');
+    }
+});
 
 module.exports = router;

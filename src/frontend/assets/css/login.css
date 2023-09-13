@@ -104,15 +104,15 @@ label img {
     flex-direction: column;
     width: 33vw;
     height: 75vh;
-    background-color: #FAEBD7; /* Couleur parchemin */
-    border: 2px solid #8B4513; /* Bordure brun foncé */
+    background-color: #FAEBD7; 
+    border: 2px solid #8B4513;
     padding: 20px;
     margin-left: 33.5vw;
     margin-top: 100px;
     font-family: 'Courier New', monospace;
     font-size: 15px;
     text-shadow: 1px 1px 2px black;
-    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; /* Ombre interne et externe pour effet brûlé/froissé */
+    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; 
     border-radius: 12px;
     position: relative;
     align-items: center;

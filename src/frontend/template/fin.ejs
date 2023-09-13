@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin</title>
+    <link rel="stylesheet" href="../assets/css/profil.css"> 
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="ctn"></div>
+        <div class="ctn-bas"> </div>
+    </nav>
+
+    <div class="ctnprofil">
+        <h1 class="titleprofil">Récapitulatif de la partie :</h1>
+        <div class="infoprofil">
+            <div class="pseudo">
+                <h2>Pseudo : <span><%= joueur.pseudo %></span> </h2>
+            </div>
+
+            <div class="nbrgold">
+                <h2>Gold restant: <span> <%= joueur.gold %></span></h2>
+            </div>
+            <div class="alignement">
+                <h2>Avancement atteint: <span><%= joueur.avancement %></span></h2>
+            </div>
+            <div class="titre-pirate">
+                <h2>Votre titre : <span id="titre-pirate-span"> </span></h2>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script>
+
+    let titrePirate = document.getElementById('titre-pirate-span');
+
+    if(<%= joueur.avancement %> <= 10){
+        titrePirate.innerHTML = "Moussaillon";
+    }else if(<%= joueur.avancement %> <= 30){
+        titrePirate.innerHTML = "Pirate";
+    }else if(<%= joueur.avancement %> <= 50){
+        titrePirate.innerHTML = "Capitaine";
+    }else if(<%= joueur.avancement %> <= 70){
+        titrePirate.innerHTML = "Amiral";
+    }else if(<%= joueur.avancement %> <= 80){
+        titrePirate.innerHTML = "Roi des Pirates";
+    }
+
+
+</script>
+</html>

@@ -37,11 +37,9 @@ class Joueur {
                 case 'gold':
                     joueur.gold += effect.value;
                     break;
-                // ... d'autres types d'effets
             }
         }
     
-        // Supprimer l'item de l'inventaire après utilisation
         const index = joueur.inventory.indexOf(item);
         if (index > -1) {
             joueur.inventory.splice(index, 1);
