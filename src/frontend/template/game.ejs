@@ -39,10 +39,9 @@
         </div>
     </nav>
 
-    <div class="ctn-question">
+    <div class="ctn-question" style = "display: none;">
         <div class="question">
-            <h1 id="question-h1"></h1>
-
+            <h1 id="question-h1"><%= items[0].name %></h1>
         </div>
         <div class="reponse">
             <div class="reponse1">
@@ -58,7 +57,7 @@
         </div>
     </div>
 
-    <div class="ctnprofil" style="display : none;">
+    <div class="ctnprofil" ">
         <h1 class="titleshop">BOUTIQUE</h1>
         <div class="ctnobjet">
             <div class="left">
@@ -68,8 +67,8 @@
                             <img src="../assets/img/Ruffian_Sea_Dog_Blunderbuss.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>fusil</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[3].name %></h2>
+                            <p><%= items[3].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>
@@ -80,8 +79,8 @@
                             <img src="../assets/img/Rogue_Sea_Dog_Compass.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>compass</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[0].name %></h2>
+                            <p><%= items[0].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>                    
@@ -92,8 +91,8 @@
                             <img src="../assets/img/Rogue_Sea_Dog_Spyglass.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>longue vue</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[1].name %></h2>
+                            <p><%= items[1].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>
@@ -106,8 +105,8 @@
                             <img src="../assets/img/Royal_Revenge_Pistol.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>pistolet dragon</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[5].name %></h2>
+                            <p><%= items[5].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>
@@ -118,8 +117,8 @@
                             <img src="../assets/img/Obsidian_Eye_of_Reach.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>fusil préc</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[4].name %></h2>
+                            <p><%= items[4].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>
@@ -130,8 +129,8 @@
                             <img src="../assets/img/Black_Dog_Cutlass.webp" alt="objet1" class="imgobjet">
                         </div>
                         <div class="ctntext">
-                            <h2>épée</h2>
-                            <p>description de l'objet</p>
+                            <h2><%= items[2].name %></h2>
+                            <p><%= items[2].description %></p>
                             <button>ACHETER</button>
                         </div>
                     </div>
@@ -141,5 +140,7 @@
     </div>
     
 </body>
+<script>
+</script>
 
 </html>

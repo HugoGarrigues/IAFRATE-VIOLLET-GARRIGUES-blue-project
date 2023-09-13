@@ -50,12 +50,14 @@ router.post('/submit-pseudo', (req, res) => {
 
 
 const defaultEvenements = require('../models/defaultEvenements');
+const defaultItems = require('../models/defaultItems');
 
 router.get('/game', (req, res) => {
     if(req.session.joueur) {
         res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'game.ejs'), {
             joueur: req.session.joueur,
-            evenements: defaultEvenements
+            evenements: defaultEvenements,
+            items: defaultItems,
         });
     } else {
         res.redirect('/login');
