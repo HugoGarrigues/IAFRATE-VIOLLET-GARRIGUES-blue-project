@@ -29,16 +29,16 @@ router.post('/submit-pseudo', (req, res) => {
         return res.redirect('/login?error=missing-question-answer');
     }
 
-    const hp = 100; // exemple
+    const avancement = 12; // exemple
     const gold = 10; // exemple
     const inventory = []; // exemple
 
-    const joueur = new Joueur(pseudo, hp, gold, inventory);
+    const joueur = new Joueur(pseudo, avancement, gold, inventory);
 
     // Stockage des données du joueur dans la session
     req.session.joueur = {
         pseudo: joueur.pseudo,
-        hp: joueur.hp,
+        avancement: joueur.avancement,
         gold: joueur.gold,
         inventory: joueur.inventory
     };

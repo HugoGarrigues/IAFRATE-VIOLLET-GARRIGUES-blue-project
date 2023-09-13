@@ -1,8 +1,8 @@
 
 class Joueur {
-    constructor(pseudo, hp, gold, inventory) {
+    constructor(pseudo, avancement, gold, inventory) {
         this.pseudo = pseudo;
-        this.hp = hp;
+        this.avancement = avancement;
         this.gold = gold;
         this.inventory = inventory;
     }
@@ -31,7 +31,7 @@ class Joueur {
         for (const effect of item.effects) {
             switch (effect.type) {
                 case 'alignement':
-                    joueur.alignement += effect.value;
+                    joueur.avancement += effect.value;
                     break;
                 case 'gold':
                     joueur.gold += effect.value;
