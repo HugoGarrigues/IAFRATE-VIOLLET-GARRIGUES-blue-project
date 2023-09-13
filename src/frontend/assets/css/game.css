@@ -5,11 +5,15 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 550px;
+    margin-top: 450px;
 }
 
 body{
     overflow: hidden;
+    background-image: url("../img/background-login.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .fond{
@@ -26,35 +30,35 @@ body{
 }
 
 button {
-    background-color: #8B4513; /* Couleur brun qui rappelle le bois d'un navire */
-    color: #F4A460; /* Couleur sable */
-    border: 3px solid #A0522D; /* Bordure plus foncée */
+    background-color: #8B4513; 
+    color: #F4A460; 
+    border: 3px solid #A0522D; 
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s;
-    font-family: 'Courier New', monospace; /* Police qui évoque les écrits à la main */
+    font-family: 'Courier New', monospace; 
     text-shadow: 1px 1px 2px black;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 8px; /* Coins légèrement arrondis */
+    border-radius: 8px; 
 }
 
 button:hover {
-    background-color: #A0522D; /* Changement de couleur au survol */
+    background-color: #A0522D; 
     color: white;
 }
 
 .question{
     min-width: auto;
     max-width: 70%;
-    background-color: #FAEBD7; /* Couleur parchemin */
-    border: 2px solid #8B4513; /* Bordure brun foncé */
+    background-color: #FAEBD7;
+    border: 2px solid #8B4513; 
     padding: 20px;
     margin: 20px;
     font-family: 'Courier New', monospace;
     font-size: 15px;
     text-shadow: 1px 1px 2px black;
-    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; /* Ombre interne et externe pour effet brûlé/froissé */
+    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; 
     border-radius: 12px;
     position: relative;
     align-items: center;
@@ -68,3 +72,6 @@ button:hover {
       border-radius: 50%;
 }
 
+.pass-question{
+    display: none;
+}
