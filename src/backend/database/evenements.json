@@ -1,0 +1,92 @@
+[
+    {
+        "question": "Vous rencontrez une tempête ! Que faites-vous ?",
+        "choix1": "Naviguer à travers",
+        "choix2": "Contourner la tempête",
+        "nbrGoldIncrement": 10,
+        "nbrAvancementIncrement": 5,
+        "reponseCorrecte": 2,
+        "reussite": null
+    },
+    {
+        "question": "Une belle sirène apparaît près de votre navire ! Que faites-vous ?",
+        "choix1": "L'inviter à bord",
+        "choix2": "Ignorer et continuer",
+        "nbrGoldIncrement": 5,
+        "nbrAvancementIncrement": 2,
+        "reponseCorrecte": 1,
+        "reussite": null
+    },
+    {
+        "question": "Un énorme monstre marin émerge des profondeurs ! Que faites-vous ?",
+        "choix1": "Tenter de le combattre",
+        "choix2": "Naviguer rapidement pour échapper",
+        "nbrGoldIncrement": 5,
+        "nbrAvancementIncrement": 5,
+        "reponseCorrecte": 2,
+        "reussite": null
+    },
+    {
+        "question": "Vous trouvez un naufragé à la dérive en pleine mer ! Que faites-vous ?",
+        "choix1": "Le sauver et l'interroger",
+        "choix2": "Le laisser à la dérive",
+        "nbrGoldIncrement": 5,
+        "nbrAvancementIncrement": 2,
+        "reponseCorrecte": 1,
+        "reussite": null
+    },
+    {
+        "question": "Des pirates attaquent votre navire ! Que faites-vous ?",
+        "choix1": "Les combattre",
+        "choix2": "Fuir avec rapidité",
+        "nbrGoldIncrement": 10,
+        "nbrAvancementIncrement": 5,
+        "reponseCorrecte": 1,
+        "reussite": null
+    },
+    {
+        "question": "L'un de vos membres d'équipage se révèle être un traître ! Que faites-vous ?",
+        "choix1": "Le confronter et le juger",
+        "choix2": "Lui donner une chance de se racheter",
+        "nbrGoldIncrement": 5,
+        "nbrAvancementIncrement": 3,
+        "reponseCorrecte": 2,
+        "reussite": null
+    },
+    {
+        "question": "Vous découvrez une tribu insulaire pacifique sur une île ! Que faites-vous ?",
+        "choix1": "Établir des relations diplomatiques",
+        "choix2": "Les ignorer et continuer votre voyage",
+        "nbrGoldIncrement": 15,
+        "nbrAvancementIncrement": 10,
+        "reponseCorrecte": 1,
+        "reussite": null
+    },
+    {
+        "question": "Vous trouvez une vieille carte au trésor ! Que faites-vous ?",
+        "choix1": "Suivre la carte et chercher le trésor",
+        "choix2": "Ignorer la carte et continuer",
+        "nbrGoldIncrement": 20,
+        "nbrAvancementIncrement": 15,
+        "reponseCorrecte": 1,
+        "reussite": null
+    },
+    {
+        "question": "Vous croisez la route d'un mystérieux navire fantôme ! Que faites-vous ?",
+        "choix1": "S'approcher et explorer le navire",
+        "choix2": "Éviter le navire fantôme à tout prix",
+        "nbrGoldIncrement": 10,
+        "nbrAvancementIncrement": 5,
+        "reponseCorrecte": 2,
+        "reussite": null
+    },
+    {
+        "question": "Vous découvrez une mystérieuse île au trésor ! Que faites-vous ?",
+        "choix1": "Débarquer et explorer l'île",
+        "choix2": "Rester à bord et observer",
+        "nbrGoldIncrement": 15,
+        "nbrAvancementIncrement": 10,
+        "reponseCorrecte": 1,
+        "reussite": null
+    }
+]
