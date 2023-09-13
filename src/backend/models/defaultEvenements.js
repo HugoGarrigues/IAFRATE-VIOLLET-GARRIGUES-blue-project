@@ -5,7 +5,8 @@ const tempete = new Evenement(
     "Naviguer à travers",
     "Contourner la tempête",
     10,  // nbrGoldIncrement
-    5    // nbrAvancementIncrement
+    5,    // nbrAvancementIncr²ement
+    2     // reponseCorrecte
 );
 
 const attaquePirate = new Evenement(
@@ -13,7 +14,8 @@ const attaquePirate = new Evenement(
     "Les combattre",
     "Fuir avec rapidité",
     20,
-    10
+    10,
+    1 // reponseCorrecte
 );
 
 const defaultEvenements = [tempete, attaquePirate];
