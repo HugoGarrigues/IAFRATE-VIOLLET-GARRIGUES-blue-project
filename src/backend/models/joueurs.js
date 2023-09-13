@@ -1,10 +1,11 @@
 
 class Joueur {
-    constructor(pseudo, avancement, gold, inventory) {
+    constructor(pseudo, avancement, gold, inventory, nbrEvents) {
         this.pseudo = pseudo;
         this.avancement = avancement;
         this.gold = gold;
         this.inventory = inventory;
+        this.nbrEvents = nbrEvents
     }
 
     estPseudoValide() {
