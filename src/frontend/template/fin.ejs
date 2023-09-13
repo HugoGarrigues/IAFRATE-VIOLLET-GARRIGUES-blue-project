@@ -38,18 +38,17 @@
 
     let titrePirate = document.getElementById('titre-pirate-span');
 
-    if(<%= joueur.avancement %> <= 10){
+    if(<%= joueur.avancement %> <= 25){
         titrePirate.innerHTML = "Moussaillon";
-    }else if(<%= joueur.avancement %> <= 30){
+    }else if(<%= joueur.avancement %> <= 40){
         titrePirate.innerHTML = "Pirate";
-    }else if(<%= joueur.avancement %> <= 50){
+    }else if(<%= joueur.avancement %> <= 60){
         titrePirate.innerHTML = "Capitaine";
-    }else if(<%= joueur.avancement %> <= 70){
+    }else if(<%= joueur.avancement %> <= 75){
         titrePirate.innerHTML = "Amiral";
-    }else if(<%= joueur.avancement %> <= 80){
+    }else if(<%= joueur.avancement %> <= 92){
         titrePirate.innerHTML = "Roi des Pirates";
     }
-
 
 </script>
 </html>
