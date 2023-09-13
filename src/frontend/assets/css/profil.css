@@ -1,0 +1,57 @@
+body{
+    overflow: hidden;
+}
+
+.ctnprofil{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 52vh;
+    background-color: #FAEBD7; /* Couleur parchemin */
+    border: 2px solid #8B4513; /* Bordure brun foncé */
+    padding: 20px;
+    margin-left: 33.5vw;
+    margin-top: 200px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; /* Ombre interne et externe pour effet brûlé/froissé */
+    border-radius: 12px;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+}
+
+.ctnprofil::before, .ctnprofil::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+.fond{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.titleprofil{
+    margin-top: 70px;
+}
+
+.infoprofil{
+    margin-top: 50px;
+}
+
+.pseudo{
+    margin-bottom: 50px;
+}
+
+.alignement{
+    margin-bottom: 50px;
+}
+
+.nbrgold{
+    margin-bottom: 50px;
+}

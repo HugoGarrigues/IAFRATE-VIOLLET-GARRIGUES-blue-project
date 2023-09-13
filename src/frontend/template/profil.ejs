@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="../assets/css/profil.css"> 
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="ctn">
+            <div class="ctn-profil">
+                <div class="picture">
+                    <a href="/game"><img src="../assets/img/profil.png" alt="profil"></a>
+                </div>
+                <div class="name">
+                    <p><%= joueur.pseudo %></p>
+                </div>
+            </div>
+            <div class="gold">
+                <p><%= joueur.gold %></p><span><img class="piece" src="../assets/img/gold.png" alt=""></span>
+            </div>
+        </div>
+
+        <div class="ctn-bas">
+            <img src="../assets/img/dead.png" class="mort">
+            <div class="ocean">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="boat">
+                    <img src="../assets/img/boat.png" alt="boat">
+                </div>
+            </div>
+            <img src="../assets/img/or.png" class="coffre">
+        </div>
+    </nav>
+    <img src="../assets/img/background-login.jpg" class="fond">
+
+
+    <div class="ctnprofil">
+        <h1 class="titleprofil">PROFIL</h1>
+        <div class="infoprofil">
+            <div class="pseudo">
+                <h2>Pseudo : <span>la tu fou le pseudo</span> </h2>
+            </div>
+            <div class="alignement">
+                <h2>Avancement : <span>25</span></h2>
+            </div>
+            <div class="nbrgold">
+                <h2>Nombre de Gold : <span> 10</span></h2>
+            </div>
+            <div class="inventaire">
+                <h2>Inventaire : <span> Boussole</span></h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
