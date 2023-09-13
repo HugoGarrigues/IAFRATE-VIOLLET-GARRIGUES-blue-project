@@ -1,0 +1,109 @@
+body{
+    overflow: hidden;
+}
+
+.ctnprofil{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 70vh;
+    background-color: #FAEBD7; /* Couleur parchemin */
+    border: 2px solid #8B4513; /* Bordure brun foncé */
+    padding: 20px;
+    margin-left: 19vw;
+    margin-top: 120px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000; /* Ombre interne et externe pour effet brûlé/froissé */
+    border-radius: 12px;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+}
+
+.ctnprofil::before, .ctnprofil::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+
+.fond{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.titleshop{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.imgobjet{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 2px solid #8B4513;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px #A0522D, 0 0 10px #000;
+}
+
+.ctnobjet{
+    padding-left: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+
+
+.left{
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.objet1, .objet2, .objet3, .objet4, .objet5, .objet6{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.ctnimg{
+    margin-right: 20px;
+}
+
+
+.imgandtext{
+    display: flex;
+    align-items: center;
+}
+
+button {
+    width: 6.5vw;
+    height: 5vh;
+    background-color: #8B4513; 
+    color: #F4A460; 
+    border: 3px solid #A0522D; 
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Courier New', monospace; 
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px; 
+}
+
+button:hover {
+    background-color: #A0522D; 
+    color: white;
+}
