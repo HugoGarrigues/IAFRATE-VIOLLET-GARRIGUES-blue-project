@@ -5,57 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
 </head>
 <body>
-    <div class="ctn-form">
-        <form action="/submit-pseudo" method="post">
-            <input type="text" name="pseudo" placeholder="Entrez votre Pseudo">
-
-            <h1 class="form-items-title">
-                Choisissez vos items :
-            </h1>
-
-            <label for="radio-item-1"><img src="../assets/img/Rogue_Sea_Dog_Compass.webp" alt="" /></label>
-            <input type="radio" name="radio-item" id="radio-item-1" value="Rogue_Sea_Dog_Compass">
-
-            <label for="radio-item-2"><img src="../assets/img/Rogue_Sea_Dog_Spyglass.webp" alt="" /></label>
-            <input type="radio" name="radio-item" id="radio-item-2" value="Rogue_Sea_Dog_Spyglass">
-
-            <label for="radio-item-3"><img src="../assets/img/Black_Dog_Cutlass.webp" alt="" /></label>
-            <input type="radio" name="radio-item" id="radio-item-3" value="Black_Dog_Cutlass">
-
-            <div class="form-items-description">
-
-            </div>
-
-            <div class="form-questions">
-                <div class="question">As-tu déjà navigué?</div>
-                <div class="checkbox">
-                    <input type="radio" name="navigation" value="Oui"> Oui
-                    <input type="radio" name="navigation" value="Non"> Non
+    <nav>
+        <div class="ctn"></div>
+        <div class="ctn-bas"></div>
+    </nav>
+    <div class="ctnprofil">
+        <h1 class="titleprofil">LOGIN</h1>
+        <div class="ctn-form">
+            <form action="/submit-pseudo" method="post">
+                <input type="text" name="pseudo" placeholder="Entrez votre Pseudo">
+    
+                <h1 class="form-items-title">
+                    Choisissez vos items :
+                </h1>
+    
+                <label for="radio-item-1"><img src="../assets/img/Rogue_Sea_Dog_Compass.webp" alt="" /></label>
+                <input type="radio" name="radio-item" id="radio-item-1" value="Rogue_Sea_Dog_Compass">
+    
+                <label for="radio-item-2"><img src="../assets/img/Rogue_Sea_Dog_Spyglass.webp" alt="" /></label>
+                <input type="radio" name="radio-item" id="radio-item-2" value="Rogue_Sea_Dog_Spyglass">
+    
+                <label for="radio-item-3"><img src="../assets/img/Black_Dog_Cutlass.webp" alt="" /></label>
+                <input type="radio" name="radio-item" id="radio-item-3" value="Black_Dog_Cutlass">
+    
+                <div class="form-items-description">
+    
                 </div>
-                <br>
-
-                <div class="question">As-tu peur de la mort?</div>
-                <div class="checkbox">
-                    <input type="radio" name="mort" value="Oui"> Oui
-                    <input type="radio" name="mort" value="Non"> Non
+    
+                <div class="form-questions">
+                    <div class="question">As-tu déjà navigué?</div>
+                    <div class="checkbox">
+                        <input type="radio" name="navigation" value="Oui"> Oui
+                        <input type="radio" name="navigation" value="Non"> Non
+                    </div>
+                    <br>
+    
+                    <div class="question">As-tu peur de la mort?</div>
+                    <div class="checkbox">
+                        <input type="radio" name="mort" value="Oui"> Oui
+                        <input type="radio" name="mort" value="Non"> Non
+                    </div>
+                    <br>
+    
+                    <div class="question">Aimes-tu l'alcool?</div>
+                    <div class="checkbox">
+                        <input type="radio" name="alcool" value="Oui"> Oui
+                        <input type="radio" name="alcool" value="Non"> Non
+                    </div>
+                    <br>
+    
+                    <div class="form-submit">
+                        <button type="submit">Valider</button>
+                    </div>
                 </div>
-                <br>
-
-                <div class="question">Aimes-tu l'alcool?</div>
-                <div class="checkbox">
-                    <input type="radio" name="alcool" value="Oui"> Oui
-                    <input type="radio" name="alcool" value="Non"> Non
-                </div>
-                <br>
-
-                <div class="form-submit">
-                    <button type="submit">Valider</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
+    </div>
+
 </body>
 <script>
     // Vérifier les paramètres de l'URL pour les erreurs et afficher une alerte si nécessaire
