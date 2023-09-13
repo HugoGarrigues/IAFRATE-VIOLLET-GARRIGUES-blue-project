@@ -64,5 +64,16 @@ router.get('/game', (req, res) => {
     }
 });
 
+router.get('/profil', (req, res) => {
+    if(req.session.joueur) {
+        res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'profil.ejs'), {
+            joueur: req.session.joueur
+        });
+    } else {
+        // Si l'utilisateur n'a pas de session, redirigez-le vers la page de connexion
+        res.redirect('/login');
+    }
+});
+
 
 module.exports = router;
