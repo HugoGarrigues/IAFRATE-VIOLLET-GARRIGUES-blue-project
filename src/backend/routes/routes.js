@@ -53,10 +53,13 @@ router.post('/submit-pseudo', (req, res) => {
 
 
 
+const defaultEvenements = require('../models/defaultEvenements');
+
 router.get('/game', (req, res) => {
     if(req.session.joueur) {
         res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'game.ejs'), {
-            joueur: req.session.joueur
+            joueur: req.session.joueur,
+            evenements: defaultEvenements
         });
     } else {
         // Si l'utilisateur n'a pas de session, redirigez-le vers la page de connexion
