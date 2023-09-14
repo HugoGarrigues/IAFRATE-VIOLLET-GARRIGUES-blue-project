@@ -421,6 +421,13 @@ voler4.addEventListener("click", () => {
     if (joueur.gold >= 20) {
         joueur.gold = joueur.gold - 20;
         currentId = currentId +1;
+        document.querySelector("#gold-display").innerText = joueur.gold;
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
     } else {
         alert("Vous n'avez pas assez d'argent");
     }
