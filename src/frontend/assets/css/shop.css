@@ -2,7 +2,7 @@ body{
     overflow: hidden;
 }
 
-.ctnprofil{
+.ctnshop{
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -22,7 +22,7 @@ body{
     z-index: 1;
 }
 
-.ctnprofil::before, .ctnprofil::after {
+.ctnshop::before, .ctnprofil::after {
     content: "";
     position: absolute;
     width: 20%;
@@ -87,7 +87,7 @@ body{
     align-items: center;
 }
 
-.ctnprofil button {
+.ctnshop button {
     width: 6.5vw;
     height: 5vh;
     background-color: #8B4513; 

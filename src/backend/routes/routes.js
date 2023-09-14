@@ -27,7 +27,7 @@ router.post('/submit-pseudo', (req, res) => {
         return res.redirect('/login?error=missing-question-answer');
     }
 
-    const avancement = 12; 
+    const avancement = 10; 
     const gold = 10; 
     const inventory = []; 
 

@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="../assets/css/navbar.css">
     <link rel="stylesheet" href="../assets/css/game.css">
     <link rel="stylesheet" href="../assets/css/shop.css">
+    <link rel="stylesheet" href="../assets/css/profil.css">
     <title>Game</title>
 </head>
 <body>
+    <!-- navbar -->
     <nav>
         <div class="ctn">
             <div class="ctn-profil">
                 <div class="picture">
-                    <a href="/profil"><img src="../assets/img/profil.png" alt="profil"></a>
+                    <img src="../assets/img/profil.png" alt="profil" id="profil">
+                    <img src="../assets/img/51388.png" alt="croix" id="profil-croix" style="display: none; filter: invert(100%); width: 59.25px; height: 61.94px; padding-right: 17px; margin-left: 20px">
                 </div>
                 <div class="name">
                     <p><%= joueur.pseudo %></p>
@@ -38,8 +41,8 @@
             <img src="../assets/img/or.png" class="coffre">
         </div>
     </nav>
-
-    <div class="ctn-question">
+<!-- Question evenements -->
+    <div class="ctn-question" id="ctn-question" >
         <div class="question">
             <h1 id="question-h1"></h1>
         </div>
@@ -54,7 +57,8 @@
         </div>
     </div>
 
-    <div class="ctnprofil" style="display: none;">
+    <!-- shop -->
+    <div class="ctnshop" id="ctnshop" style="display: none;">
         <h1 class="titleshop">BOUTIQUE</h1>
         <div class="ctnobjet">
             <div class="left">
@@ -136,6 +140,25 @@
         </div>
     </div>
     
+    <!-- profil -->
+    <div class="ctnprofil" id="ctnprofil" style="display: none;">
+        <h1 class="titleprofil">PROFIL</h1>
+        <div class="infoprofil">
+            <div class="pseudo">
+                <h2>Pseudo : <span><%= joueur.pseudo %></span> </h2>
+            </div>
+            <div class="alignement">
+                <h2>Avancement : <span id="profil-avancement"></span></h2>
+            </div>
+            <div class="nbrgold">
+                <h2>Nombre de Gold : <span id="profil-gold"></span></h2>
+            </div>
+            <div class="inventaire">
+                <h2>Inventaire : <span> <%= joueur.inventory %></span></h2>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script>
 let evenements = [];
@@ -162,7 +185,7 @@ function loadQuestionById(id) {
   }
 }
 // Charge la première question lors du chargement de la page
-window.addEventListener('load', () => {
+window.addEventListener('open', () => {
   loadQuestionById(currentId);
 });
 
@@ -170,17 +193,25 @@ document.getElementById('rep-1').addEventListener('click', () => {
     verifAvancement(joueur.avancement);
     verifReponse(evenements[currentId - 1].choix1, evenements[currentId - 1].reponseCorrecte);
     currentId++;
+    if (currentId > 10) {
+    window.location.href = '/fin';
+  } else {
     loadQuestionById(currentId);
-  });
+  }
+});
 
   document.getElementById('rep-2').addEventListener('click', () => {
     verifAvancement(joueur.avancement);
     verifReponse(evenements[currentId - 1].choix2, evenements[currentId - 1].reponseCorrecte);
     currentId++;
+    if (currentId > 10) {
+    window.location.href = '/fin';
+  } else {
     loadQuestionById(currentId);
-  });
+  }
+});
 
-/* Gere les Golds */
+/* Gere les JSON */
 joueur = JSON.parse('<%- JSON.stringify(joueur) %>');
 items = JSON.parse('<%- JSON.stringify(items) %>');
 
@@ -228,6 +259,27 @@ function verifAvancement(avancement) {
     }
 }
 
+profil = document.querySelector("#profil");
+
+profil.addEventListener("click", () => {
+    document.querySelector("#ctnprofil").style.display = "flex";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "none";
+    document.querySelector("#profil-croix").style.display = "block";
+    document.querySelector("#profil").style.display = "none";
+    document.querySelector("#profil-gold").innerText = joueur.gold;
+    document.querySelector("#profil-avancement").innerText = joueur.avancement;
+}); 
+
+profilCroix = document.querySelector("#profil-croix") 
+
+profilCroix.addEventListener("click", () => {
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+});
 
 </script>
 

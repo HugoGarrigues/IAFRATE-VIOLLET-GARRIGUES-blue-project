@@ -8,8 +8,6 @@ fetch('evenements.json')
   });
 
 
-
-
 let currentId = 1;
 
 function loadQuestionById(id) {

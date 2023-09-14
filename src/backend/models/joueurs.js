@@ -45,8 +45,6 @@ class Joueur {
             joueur.inventory.splice(index, 1);
         }
     }
-    
-    
 }
 
 module.exports = Joueur;    

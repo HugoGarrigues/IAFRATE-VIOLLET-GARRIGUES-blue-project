@@ -37,6 +37,7 @@ body{
 
 .picture img{
     width: 5vw;
+    cursor: pointer;
 }
 
 
