@@ -31,13 +31,20 @@ router.post('/submit-pseudo', (req, res) => {
     }
 
     if (selectedItem === "1" ){
-        a = 5;
+        a = a + 5;
     } else if (selectedItem === "2") {
-        g = 5;
+        g = g + 5;
     } else if (selectedItem === "3") {
-        a = 2;
-        g = 2;
-    } 
+        a = a + 2;
+        g = g + 2;
+    }
+
+    if (navigationAnswer === "1" && deathFearAnswer === "2" && alcoholPreference === "1") {
+        a = a + 3;
+        g = g + 3;
+    }
+
+
 
     const avancement = 10 + a; 
     const gold = 10 + g; 
