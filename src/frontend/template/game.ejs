@@ -19,7 +19,7 @@
                     <img src="../assets/img/profil.png" alt="profil" id="profil">
                     <img src="../assets/img/51388.png" alt="croix" id="profil-croix" style="display: none; filter: invert(100%); width: 59.25px; height: 61.94px; padding-right: 17px; margin-left: 20px">
                 </div>
-                <div class="name">
+                <div class="name" id="navbar-pseudo">
                     <p><%= joueur.pseudo %></p>
                 </div>
             </div>
@@ -189,6 +189,7 @@ fetch('evenements.json')
 let currentId = 1;
 
 function loadQuestionById(id) {
+    formatePseudo();
   const evenement = evenements.find(event => event.id === id);
   if (evenement) {
     document.getElementById('question-h1').textContent = evenement.question;
@@ -228,7 +229,7 @@ joueur = JSON.parse('<%- JSON.stringify(joueur) %>');
 items = JSON.parse('<%- JSON.stringify(items) %>');
 
 function incrementGold() {
-    joueur.gold = joueur.gold + 5;
+    joueur.gold = joueur.gold + 6;
     document.querySelector("#gold-display").innerText = joueur.gold;
 }
 
@@ -239,7 +240,7 @@ function incrementAvancement() {
 }
 
 function decrementGold() {
-    joueur.gold = joueur.gold - 5;
+    joueur.gold = joueur.gold - 2;
     document.querySelector("#gold-display").innerText = joueur.gold;
 }
 
@@ -333,7 +334,11 @@ function afficherFin() {
     afficherTitre(joueur.avancement);
 }
 
-
+function formatePseudo() {
+    pseudo = document.querySelector("#navbar-pseudo").innerText;
+    pseudo = pseudo.charAt(0).toUpperCase() + pseudo.slice(1).toLowerCase();
+    document.querySelector("#navbar-pseudo").innerText = pseudo;
+}
 
 
 </script>

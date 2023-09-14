@@ -54,6 +54,7 @@ router.post('/submit-pseudo', (req, res) => {
     };
 
     if (joueur.estPseudoValide()) {
+        joueur.formatePseudo();
         res.redirect('/game');
     } else {
         res.redirect('/login?error=invalid-pseudo');
@@ -62,14 +63,12 @@ router.post('/submit-pseudo', (req, res) => {
 
 
 
-const defaultEvenements = require('../models/defaultEvenements');
 const defaultItems = require('../models/defaultItems');
 
 router.get('/game', (req, res) => {
     if(req.session.joueur) {
         res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'game.ejs'), {
             joueur: req.session.joueur,
-            evenements: defaultEvenements,
             items: defaultItems,
         });
     } else {
@@ -77,24 +76,5 @@ router.get('/game', (req, res) => {
     }
 });
 
-router.get('/profil', (req, res) => {
-    if(req.session.joueur) {
-        res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'profil.ejs'), {
-            joueur: req.session.joueur
-        });
-    } else {
-        res.redirect('/login');
-    }
-});
-
-router.get('/fin', (req, res) => {
-    if(req.session.joueur) {
-        res.render(path.join(__dirname, '..', '..', 'frontend', 'template', 'fin.ejs'), {
-            joueur: req.session.joueur
-        });
-    } else {
-        res.redirect('/login');
-    }
-});
 
 module.exports = router;
