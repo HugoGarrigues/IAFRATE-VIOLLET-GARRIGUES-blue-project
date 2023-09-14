@@ -3,6 +3,9 @@ const path = require('path');
 const Joueur = require('../models/joueurs.js');
 const router = express.Router();
 
+let a = 0;
+let g = 0;
+
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
 });
@@ -27,11 +30,21 @@ router.post('/submit-pseudo', (req, res) => {
         return res.redirect('/login?error=missing-question-answer');
     }
 
-    const avancement = 10; 
-    const gold = 10; 
+    if (selectedItem === "1" ){
+        a = 5;
+    } else if (selectedItem === "2") {
+        g = 5;
+    } else if (selectedItem === "3") {
+        a = 2;
+        g = 2;
+    } 
+
+    const avancement = 10 + a; 
+    const gold = 10 + g; 
     const inventory = []; 
 
     const joueur = new Joueur(pseudo, avancement, gold, inventory);
+    
 
     req.session.joueur = {
         pseudo: joueur.pseudo,
