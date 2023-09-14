@@ -27,7 +27,7 @@
         "choix2": "Naviguer rapidement pour échapper",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": "Tenter de le combattre",
+        "reponseCorrecte": "Naviguer rapidement pour échapper",
         "reussite": null
     },
     {
@@ -37,7 +37,7 @@
         "choix2": "Le laisser à la dérive",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 2,
-        "reponseCorrecte": "Le laisser à la dérive",
+        "reponseCorrecte": "Le sauver et l'interroger",
         "reussite": null
     },
     {
@@ -57,7 +57,7 @@
         "choix2": "Lui donner une chance de se racheter",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 3,
-        "reponseCorrecte": "Lui donner une chance de se racheter",
+        "reponseCorrecte": "Le confronter et le juger",
         "reussite": null
     },
     {
@@ -67,7 +67,7 @@
         "choix2": "Les ignorer et continuer votre voyage",
         "nbrGoldIncrement": 15,
         "nbrAvancementIncrement": 10,
-        "reponseCorrecte": "Établir des relations diplomatiques",
+        "reponseCorrecte": "Les ignorer et continuer votre voyage",
         "reussite": null
     },
     {
@@ -87,7 +87,7 @@
         "choix2": "Éviter le navire fantôme à tout prix",
         "nbrGoldIncrement": 10,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": "Éviter le navire fantôme à tout prix",
+        "reponseCorrecte": "S'approcher et explorer le navire",
         "reussite": null
     },
     {
