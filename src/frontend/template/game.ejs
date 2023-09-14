@@ -70,7 +70,7 @@
                         <div class="ctntext">
                             <h2><%= items[3].name %></h2>
                             <p><%= items[3].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-1">VOLER</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         <div class="ctntext">
                             <h2><%= items[0].name %></h2>
                             <p><%= items[0].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-2">VOLER</button>
                         </div>
                     </div>                    
                 </div>
@@ -94,7 +94,7 @@
                         <div class="ctntext">
                             <h2><%= items[1].name %></h2>
                             <p><%= items[1].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-3" >VOLER</button>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         <div class="ctntext">
                             <h2><%= items[5].name %></h2>
                             <p><%= items[5].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-4" >VOLER</button>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                         <div class="ctntext">
                             <h2><%= items[4].name %></h2>
                             <p><%= items[4].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-5" >VOLER</button>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                         <div class="ctntext">
                             <h2><%= items[2].name %></h2>
                             <p><%= items[2].description %></p>
-                            <button>ACHETER</button>
+                            <button id="voler-6" >VOLER</button>
                         </div>
                     </div>
                 </div>
@@ -191,10 +191,14 @@ let currentId = 1;
 function loadQuestionById(id) {
     formatePseudo();
   const evenement = evenements.find(event => event.id === id);
+  if (currentId == 5) {
+    afficherShop();
+  }
   if (evenement) {
     document.getElementById('question-h1').textContent = evenement.question;
     document.getElementById('rep-1').textContent = evenement.choix1;
     document.getElementById('rep-2').textContent = evenement.choix2;
+    document.documentElement.style.setProperty('--current-background', `url("../img/event${id}.jpg")`);
   } else {
     console.error(`Aucun événement trouvé pour l'ID ${id}`);
   }
@@ -234,7 +238,7 @@ function incrementGold() {
 }
 
 function incrementAvancement() {
-    joueur.avancement = joueur.avancement + 12;
+    joueur.avancement = joueur.avancement + 10;
     var newLeftPosition = joueur.avancement;
     document.querySelector("#boat").style.left = newLeftPosition + "%";
 }
@@ -288,6 +292,7 @@ profilCroix.addEventListener("click", () => {
     document.querySelector("#ctn-question").style.display = "flex";
     document.querySelector("#profil-croix").style.display = "none";
     document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
 });
 
 
@@ -340,6 +345,95 @@ function formatePseudo() {
     document.querySelector("#navbar-pseudo").innerText = pseudo;
 }
 
+
+function afficherShop() {
+    document.querySelector("#ctnshop").style.display = "flex";
+    document.querySelector("#ctn-question").style.display = "none";
+    document.querySelector("#profil-croix").style.display = "block";
+    document.querySelector("#profil").style.display = "none";
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#gold-display").style.display = "block";
+}
+
+let voler1 = document.querySelector("#voler-1");
+let voler2 = document.querySelector("#voler-2");
+let voler3 = document.querySelector("#voler-3");
+let voler4 = document.querySelector("#voler-4");
+let voler5 = document.querySelector("#voler-5");
+let voler6 = document.querySelector("#voler-6");
+
+voler1.addEventListener("click", () => {
+        joueur.gold = joueur.gold + 6;
+        document.querySelector("#gold-display").innerText = joueur.gold;
+        document.querySelector("#ctnprofil").style.display = "none";
+        document.querySelector("#ctnshop").style.display = "none";
+        document.querySelector("#ctn-question").style.display = "flex";
+        document.querySelector("#profil-croix").style.display = "none";
+        document.querySelector("#profil").style.display = "block";
+        document.querySelector("#gold-display").style.display = "block";
+    }
+);
+
+
+voler2.addEventListener("click", () => {
+    joueur.avancement = joueur.avancement + 4;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
+    }
+);
+
+voler3.addEventListener("click", () => {
+    joueur.gold = joueur.gold + 10;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
+    }
+);
+
+voler4.addEventListener("click", () => {
+    if (joueur.gold >= 20) {
+        joueur.gold = joueur.gold - 20;
+        currentId = currentId +1;
+    } else {
+        alert("Vous n'avez pas assez d'argent");
+    }
+    document.querySelector("#gold-display").innerText = joueur.gold;
+}
+);
+
+voler5.addEventListener("click", () => {
+    joueur.avancement = joueur.avancement + 8;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
+    }
+);
+
+voler6.addEventListener("click", () => {
+    joueur.gold = joueur.gold + 5;
+    joueur.avancement = joueur.avancement + 3;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#ctnshop").style.display = "none";
+    document.querySelector("#ctn-question").style.display = "flex";
+    document.querySelector("#profil-croix").style.display = "none";
+    document.querySelector("#profil").style.display = "block";
+    document.querySelector("#gold-display").style.display = "block";
+    }
+);
 
 </script>
 
