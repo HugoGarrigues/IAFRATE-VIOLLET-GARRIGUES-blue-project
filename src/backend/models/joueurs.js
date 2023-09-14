@@ -4,7 +4,6 @@ class Joueur {
         this.pseudo = pseudo;
         this.avancement = avancement;
         this.gold = gold;
-        this.inventory = inventory;
         this.nbrEvents = nbrEvents
     }
 
