@@ -167,7 +167,7 @@ fetch('evenements.json')
   .then(response => response.json())
   .then(data => {
     evenements = data.evenements;
-    loadQuestionById(1); // Charger la première question
+    loadQuestionById(1);
   });
 
 let currentId = 1;
@@ -178,13 +178,10 @@ function loadQuestionById(id) {
     document.getElementById('question-h1').textContent = evenement.question;
     document.getElementById('rep-1').textContent = evenement.choix1;
     document.getElementById('rep-2').textContent = evenement.choix2;
-    // Afficher le bouton "Continuer"
   } else {
-    // Cas d'erreur: ID non trouvé
     console.error(`Aucun événement trouvé pour l'ID ${id}`);
   }
 }
-// Charge la première question lors du chargement de la page
 window.addEventListener('open', () => {
   loadQuestionById(currentId);
 });
@@ -211,30 +208,25 @@ document.getElementById('rep-1').addEventListener('click', () => {
   }
 });
 
-/* Gere les JSON */
 joueur = JSON.parse('<%- JSON.stringify(joueur) %>');
 items = JSON.parse('<%- JSON.stringify(items) %>');
 
-/* Fait une fonction qui incremente les golds */ 
 function incrementGold() {
     joueur.gold = joueur.gold + 5;
     document.querySelector("#gold-display").innerText = joueur.gold;
 }
 
-/* Fait une fonction qui incremente l'avancement */
 function incrementAvancement() {
     joueur.avancement = joueur.avancement + 12;
     var newLeftPosition = joueur.avancement;
     document.querySelector("#boat").style.left = newLeftPosition + "%";
 }
 
-/* Fait une fonction qui decremente les golds */
 function decrementGold() {
     joueur.gold = joueur.gold - 5;
     document.querySelector("#gold-display").innerText = joueur.gold;
 }
 
-/* Fait une fonction qui decremente l'avancement */
 function decrementAvancement() {
     joueur.avancement = joueur.avancement - 5;
     var newLeftPosition = joueur.avancement;

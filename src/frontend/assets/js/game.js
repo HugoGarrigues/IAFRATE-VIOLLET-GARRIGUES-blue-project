@@ -4,7 +4,7 @@ fetch('evenements.json')
   .then(response => response.json())
   .then(data => {
     evenements = data.evenements;
-    loadQuestionById(1); // Charger la première question
+    loadQuestionById(1); 
   });
 
 
@@ -17,13 +17,9 @@ function loadQuestionById(id) {
     document.getElementById('rep-1').textContent = evenement.choix1;
     document.getElementById('rep-2').textContent = evenement.choix2;
   } else {
-    // Si on est à la fin de la liste des événements, redirige vers la page /fin
     console.log('Fin du jeu !');
   }
 }
-
-
-// Charge la première question lors du chargement de la page
 window.addEventListener('load', () => {
   loadQuestionById(currentId);
 });
