@@ -6,7 +6,7 @@ const tempete = new Evenement(
     "Contourner la tempête",
     10,  
     5,    
-    2     
+    "Naviguer à travers"     
 
 );
 
@@ -16,7 +16,7 @@ const sirene = new Evenement(
     "Ignorer et continuer",
     5,  
     2,  
-    1   
+    "Naviguer à travers"   
 );
 
 const monstreMarin = new Evenement(
@@ -25,7 +25,7 @@ const monstreMarin = new Evenement(
     "Naviguer rapidement pour échapper",
     5,  
     5,  
-    2   
+    "Naviguer à travers"   
 )
 
 const naufrage = new Evenement(

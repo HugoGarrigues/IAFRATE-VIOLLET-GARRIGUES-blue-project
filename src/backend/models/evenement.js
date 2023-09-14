@@ -6,7 +6,6 @@ class Evenement {
         this.nbrGoldIncrement = nbrGoldIncrement;
         this.nbrAvancementIncrement = nbrAvancementIncrement;
         this.reponseCorrecte = reponseCorrecte;
-        this.reussite = reussite
     }
 }
 

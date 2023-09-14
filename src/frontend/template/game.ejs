@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="gold">
-                <p><%= joueur.gold %></p><span><img class="piece" src="../assets/img/gold.png" alt=""></span>
+                <p id="gold-display"><%= joueur.gold %></p><span><img class="piece" src="../assets/img/gold.png" alt=""></span>
             </div>
         </div>
     
@@ -31,7 +31,7 @@
                 <div class="wave"></div>
                 <div class="wave"></div>
                 <div class="wave"></div>
-                <div class="boat">
+                <div class="boat" id="boat" style="left: 0%;">
                     <img src="../assets/img/boat.png" alt="boat">
                 </div>
             </div>
@@ -137,6 +137,98 @@
     </div>
     
 </body>
-<script src="../assets/js/game.js"></script>
+<script>
+let evenements = [];
+
+fetch('evenements.json')
+  .then(response => response.json())
+  .then(data => {
+    evenements = data.evenements;
+    loadQuestionById(1); // Charger la première question
+  });
+
+let currentId = 1;
+
+function loadQuestionById(id) {
+  const evenement = evenements.find(event => event.id === id);
+  if (evenement) {
+    document.getElementById('question-h1').textContent = evenement.question;
+    document.getElementById('rep-1').textContent = evenement.choix1;
+    document.getElementById('rep-2').textContent = evenement.choix2;
+    // Afficher le bouton "Continuer"
+  } else {
+    // Cas d'erreur: ID non trouvé
+    console.error(`Aucun événement trouvé pour l'ID ${id}`);
+  }
+}
+// Charge la première question lors du chargement de la page
+window.addEventListener('load', () => {
+  loadQuestionById(currentId);
+});
+
+document.getElementById('rep-1').addEventListener('click', () => {
+    verifAvancement(joueur.avancement);
+    verifReponse(evenements[currentId - 1].choix1, evenements[currentId - 1].reponseCorrecte);
+    currentId++;
+    loadQuestionById(currentId);
+  });
+
+  document.getElementById('rep-2').addEventListener('click', () => {
+    verifAvancement(joueur.avancement);
+    verifReponse(evenements[currentId - 1].choix2, evenements[currentId - 1].reponseCorrecte);
+    currentId++;
+    loadQuestionById(currentId);
+  });
+
+/* Gere les Golds */
+joueur = JSON.parse('<%- JSON.stringify(joueur) %>');
+items = JSON.parse('<%- JSON.stringify(items) %>');
+
+/* Fait une fonction qui incremente les golds */ 
+function incrementGold() {
+    joueur.gold = joueur.gold + 5;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+}
+
+/* Fait une fonction qui incremente l'avancement */
+function incrementAvancement() {
+    joueur.avancement = joueur.avancement + 12;
+    var newLeftPosition = joueur.avancement;
+    document.querySelector("#boat").style.left = newLeftPosition + "%";
+}
+
+/* Fait une fonction qui decremente les golds */
+function decrementGold() {
+    joueur.gold = joueur.gold - 5;
+    document.querySelector("#gold-display").innerText = joueur.gold;
+}
+
+/* Fait une fonction qui decremente l'avancement */
+function decrementAvancement() {
+    joueur.avancement = joueur.avancement - 5;
+    var newLeftPosition = joueur.avancement;
+    document.querySelector("#boat").style.left = newLeftPosition + "%";
+}
+
+function verifReponse(choix1, reponseCorrecte) {
+    if (choix1 == reponseCorrecte) {
+        incrementGold();
+        incrementAvancement();
+    } else {
+        decrementGold();
+        decrementAvancement();
+    }
+}
+
+function verifAvancement(avancement) {
+    if (avancement >= 82) {
+        window.location.href = "/fin";
+    } else if (avancement <= 0) {
+        window.location.href = "/fin";
+    }
+}
+
+
+</script>
 
 </html>

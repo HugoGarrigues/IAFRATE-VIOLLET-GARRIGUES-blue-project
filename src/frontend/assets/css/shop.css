@@ -87,7 +87,7 @@ body{
     align-items: center;
 }
 
-button {
+.ctnprofil button {
     width: 6.5vw;
     height: 5vh;
     background-color: #8B4513; 

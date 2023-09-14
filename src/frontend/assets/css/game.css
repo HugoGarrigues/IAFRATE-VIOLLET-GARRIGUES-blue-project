@@ -29,7 +29,7 @@ body{
     justify-content: space-between;
 }
 
-button {
+.ctn-question button {
     background-color: #8B4513; 
     color: #F4A460; 
     border: 3px solid #A0522D; 

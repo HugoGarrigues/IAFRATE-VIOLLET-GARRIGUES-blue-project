@@ -7,7 +7,7 @@
         "choix2": "Contourner la tempête",
         "nbrGoldIncrement": 10,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": 2,
+        "reponseCorrecte": "Naviguer à travers",
         "reussite": null
       },
       {
@@ -17,7 +17,7 @@
         "choix2": "Ignorer et continuer",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 2,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Ignorer et continuer",
         "reussite": null
       },
       {   
@@ -27,7 +27,7 @@
         "choix2": "Naviguer rapidement pour échapper",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": 2,
+        "reponseCorrecte": "Tenter de le combattre",
         "reussite": null
     },
     {
@@ -37,7 +37,7 @@
         "choix2": "Le laisser à la dérive",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 2,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Le laisser à la dérive",
         "reussite": null
     },
     {
@@ -47,7 +47,7 @@
         "choix2": "Fuir avec rapidité",
         "nbrGoldIncrement": 10,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Les combattre",
         "reussite": null
     },
     {
@@ -57,7 +57,7 @@
         "choix2": "Lui donner une chance de se racheter",
         "nbrGoldIncrement": 5,
         "nbrAvancementIncrement": 3,
-        "reponseCorrecte": 2,
+        "reponseCorrecte": "Lui donner une chance de se racheter",
         "reussite": null
     },
     {
@@ -67,7 +67,7 @@
         "choix2": "Les ignorer et continuer votre voyage",
         "nbrGoldIncrement": 15,
         "nbrAvancementIncrement": 10,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Établir des relations diplomatiques",
         "reussite": null
     },
     {
@@ -77,7 +77,7 @@
         "choix2": "Ignorer la carte et continuer",
         "nbrGoldIncrement": 20,
         "nbrAvancementIncrement": 15,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Suivre la carte et chercher le trésor",
         "reussite": null
     },
     {
@@ -87,7 +87,7 @@
         "choix2": "Éviter le navire fantôme à tout prix",
         "nbrGoldIncrement": 10,
         "nbrAvancementIncrement": 5,
-        "reponseCorrecte": 2,
+        "reponseCorrecte": "Éviter le navire fantôme à tout prix",
         "reussite": null
     },
     {
@@ -97,7 +97,7 @@
         "choix2": "Rester à bord et observer",
         "nbrGoldIncrement": 15,
         "nbrAvancementIncrement": 10,
-        "reponseCorrecte": 1,
+        "reponseCorrecte": "Débarquer et explorer l'île",
         "reussite": null
     }
     
