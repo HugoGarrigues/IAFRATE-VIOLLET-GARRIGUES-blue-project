@@ -7,14 +7,19 @@
     flex-direction: column;
     margin-top: 450px;
 }
+:root {
+    --current-background: url("../img/default.jpg");
+}
 
-body{
+body {
+    background-image: var(--current-background);
     overflow: hidden;
-    background-image: url("../img/background-login.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
+  
 
 .fond{
     top: 0;
@@ -30,6 +35,9 @@ body{
 }
 
 .ctn-question button {
+    max-width: 200px;
+    min-height: auto;
+    height: 100px;
     background-color: #8B4513; 
     color: #F4A460; 
     border: 3px solid #A0522D; 

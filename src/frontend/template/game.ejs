@@ -195,6 +195,7 @@ function loadQuestionById(id) {
     document.getElementById('question-h1').textContent = evenement.question;
     document.getElementById('rep-1').textContent = evenement.choix1;
     document.getElementById('rep-2').textContent = evenement.choix2;
+    document.documentElement.style.setProperty('--current-background', `url("../img/event${id}.jpg")`);
   } else {
     console.error(`Aucun événement trouvé pour l'ID ${id}`);
   }
