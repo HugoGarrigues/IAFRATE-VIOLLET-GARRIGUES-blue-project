@@ -79,3 +79,26 @@ button:hover {
       height: 20%;
       border-radius: 50%;
 }
+
+.btnprice{
+    display: flex;
+
+}
+
+.btnprice h2{
+    margin-left: 20px;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: #8B4513;
+    color: gold;
+    border: 3px solid #A0522D;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+
+}
+
+.btnprice img{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
