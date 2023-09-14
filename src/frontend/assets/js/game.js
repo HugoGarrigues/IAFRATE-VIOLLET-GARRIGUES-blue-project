@@ -18,25 +18,32 @@ function loadQuestionById(id) {
     document.getElementById('question-h1').textContent = evenement.question;
     document.getElementById('rep-1').textContent = evenement.choix1;
     document.getElementById('rep-2').textContent = evenement.choix2;
-    // Afficher le bouton "Continuer"
   } else {
-    // Cas d'erreur: ID non trouvé
-    console.error(`Aucun événement trouvé pour l'ID ${id}`);
+    // Si on est à la fin de la liste des événements, redirige vers la page /fin
+    console.log('Fin du jeu !');
   }
 }
+
 
 // Charge la première question lors du chargement de la page
 window.addEventListener('load', () => {
   loadQuestionById(currentId);
 });
 
-// Lorsque l'utilisateur clique sur "Continuer", passez à la question suivante
 document.getElementById('rep-1').addEventListener('click', () => {
-    currentId++;
+  currentId++;
+  if (currentId > 10) {
+    window.location.href = '/fin';
+  } else {
     loadQuestionById(currentId);
-  });
+  }
+});
 
-  document.getElementById('rep-2').addEventListener('click', () => {
-    currentId++;
+document.getElementById('rep-2').addEventListener('click', () => {
+  currentId++;
+  if (currentId > 10) {
+    window.location.href = '/fin';
+  } else {
     loadQuestionById(currentId);
-  });
+  }
+});

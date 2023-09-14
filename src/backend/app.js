@@ -13,10 +13,10 @@ app.use(session({
     secret: 'motdepasse',
     resave: false,
     saveUninitialized: true
-  }));
+}));
 
-  app.use(express.static(path.join(__dirname, '../frontend')));
-  app.use(express.static(path.join(__dirname, 'database')));
+app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, 'database')));
 
 app.use('/', routes);
 
