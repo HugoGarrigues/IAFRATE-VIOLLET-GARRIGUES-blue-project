@@ -191,6 +191,9 @@ let currentId = 1;
 function loadQuestionById(id) {
     formatePseudo();
   const evenement = evenements.find(event => event.id === id);
+  if (currentId == 5) {
+    afficherShop();
+  }
   if (evenement) {
     document.getElementById('question-h1').textContent = evenement.question;
     document.getElementById('rep-1').textContent = evenement.choix1;
@@ -235,7 +238,7 @@ function incrementGold() {
 }
 
 function incrementAvancement() {
-    joueur.avancement = joueur.avancement + 12;
+    joueur.avancement = joueur.avancement + 10;
     var newLeftPosition = joueur.avancement;
     document.querySelector("#boat").style.left = newLeftPosition + "%";
 }
@@ -340,6 +343,17 @@ function formatePseudo() {
     pseudo = pseudo.charAt(0).toUpperCase() + pseudo.slice(1).toLowerCase();
     document.querySelector("#navbar-pseudo").innerText = pseudo;
 }
+
+
+function afficherShop() {
+    document.querySelector("#ctnshop").style.display = "flex";
+    document.querySelector("#ctn-question").style.display = "none";
+    document.querySelector("#profil-croix").style.display = "block";
+    document.querySelector("#profil").style.display = "none";
+    document.querySelector("#ctnprofil").style.display = "none";
+    document.querySelector("#gold-display").style.display = "none";
+}
+
 
 
 </script>
