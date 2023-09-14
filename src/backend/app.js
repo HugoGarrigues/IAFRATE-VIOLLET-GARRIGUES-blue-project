@@ -15,7 +15,8 @@ app.use(session({
     saveUninitialized: true
   }));
 
-app.use(express.static(path.join(__dirname, '../frontend')));
+  app.use(express.static(path.join(__dirname, '../frontend')));
+  app.use(express.static(path.join(__dirname, 'database')));
 
 app.use('/', routes);
 
